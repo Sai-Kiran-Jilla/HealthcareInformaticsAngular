@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortTable('employeeCode')">Employee Code</th>
+      <th (click)="sortTable('employeeName')">Employee Name</th>
+      <th (click)="sortTable('dateOfBirth')">Date of Birth</th>
+      <th (click)="sortTable('gender')">Gender</th>
+      <th (click)="sortTable('department')">Department</th>
+      <th (click)="sortTable('designation')">Designation</th>
+      <th (click)="sortTable('basicSalary')">Basic Salary</th>
+      <th (click)="sortTable('dearnessAllowance')">Dearness Allowance</th>
+      <th (click)="sortTable('conveyanceAllowance')">Conveyance Allowance</th>
+      <th (click)="sortTable('houseRentAllowance')">House Rent Allowance</th>
+      <th (click)="sortTable('totalSalary')">Total Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td data-label="Employee Code">{{ employee.employeeCode }}</td>
+      <td data-label="Employee Name">{{ employee.employeeName }}</td>
+      <td data-label="Date of Birth">{{ employee.dateOfBirth | date }}</td>
+      <td data-label="Gender">{{ employee.gender ? 'Male' : 'Female' }}</td>
+      <td data-label="Department">{{ employee.department }}</td>
+      <td data-label="Designation">{{ employee.designation }}</td>
+      <td data-label="Basic Salary">{{ employee.basicSalary }}</td>
+      <td data-label="Dearness Allowance">{{ employee.dearnessAllowance }}</td>
+      <td data-label="Conveyance Allowance">{{ employee.conveyanceAllowance }}</td>
+      <td data-label="House Rent Allowance">{{ employee.houseRentAllowance }}</td>
+      <td data-label="Total Salary">{{ employee.totalSalary }}</td>
+      <td data-label="Actions"><a [routerLink]="['/employee-detail', employee.employeeCode]">View Details</a></td>
+    </tr>
+  </tbody>
+</table>

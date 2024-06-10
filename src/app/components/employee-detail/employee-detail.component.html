@@ -1,0 +1,10 @@
+<div *ngIf="employee">
+    <h2>{{ employee.employeeName }}</h2>
+    <p>Employee Code: {{ employee.employeeCode }}</p>
+    <p>Date of Birth: {{ employee.dateOfBirth | date }}</p>
+    <p>Gender: {{ employee.gender ? 'Male' : 'Female' }}</p>
+    <p>Department: {{ employee.department }}</p>
+    <p>Designation: {{ employee.designation }}</p>
+    <p>Basic Salary: {{ employee.basicSalary }}</p>
+  </div>
+  
